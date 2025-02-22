@@ -20,7 +20,7 @@
   </head>
   <body>
     <!-- Header -->
-    <head class="header" id="header">
+    <header class="header" id="header">
       <nav class="nav container">
         <a href="#" class="nav__logo"> <img src="img/logo.svg" alt="image" /> Planet </a>
 
@@ -56,12 +56,30 @@
           <i class="ri-menu-4-line"></i>
         </div>
       </nav>
-    </head>
+    </header>
 
     <!-- Main -->
     <main class="main">
       <!-- Home -->
-      <section class="home section" id="home"></section>
+      <section class="home section" id="home">
+        <img src="img/home-bg.svg" alt="image" class="home__bg" />
+
+        <div class="home__container container grid">
+          <div class="home__data">
+            <h1 class="home__title">
+              <span>WELCOME</span>
+              <span>TO THE</span>
+              <span>SPACE</span>
+            </h1>
+
+            <a href="#" class="button">Explore Mars</a>
+
+            <img src="img/home-ovni.svg" alt="image" class="home__ovni" />
+          </div>
+
+          <img src="img/home-img.png" alt="image" class="home__img" />
+        </div>
+      </section>
 
       <!-- Travel -->
       <section class="travel section" id="travel"></section>
@@ -80,5 +98,8 @@
 
     <!-- Scroll Reveal -->
     <script src=""></script>
+
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
   </body>
 </html>
