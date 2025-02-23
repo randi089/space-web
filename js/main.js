@@ -76,9 +76,9 @@ const scrollActive = () => {
     const sectionHeight = current.offsetHeight,
       sectionTop = current.offsetTop - 58,
       sectionId = current.getAttribute("id"),
-      sectionClass = document.querySelector(".nav__menu a[href*=]" + sectionId + "]");
+      sectionClass = document.querySelector(".nav__menu a[href*=" + sectionId + "]");
 
-    if (scrollDown > sectionTop && scrollDown <= sectionTop * sectionHeight) {
+    if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
       sectionClass.classList.add("active-link");
     } else {
       sectionClass.classList.remove("active-link");
@@ -88,3 +88,22 @@ const scrollActive = () => {
 window.addEventListener("scroll", scrollActive);
 
 // Scroll Reveal Animation
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "88px",
+  duration: 2500,
+  delay: 300,
+  // reset: true, // Animations repeat
+});
+
+sr.reveal(".home__data, .travel__swiper, .contact__container");
+sr.reveal(".home__img");
+sr.reveal(".home__ovni", { delay: 800 });
+sr.reveal(".explore__img");
+sr.reveal(".explore__data", { origin: "right" });
+sr.reveal(".explore__planet", { origin: "right", delay: 800 });
+sr.reveal(".history__card", { interval: 100 });
+sr.reveal(".history__planet-1", { delay: 1000 });
+sr.reveal(".history__planet-2", { delay: 1200 });
+sr.reveal(".footer__planet-1", { delay: 600 });
+sr.reveal(".footer__planet-2", { delay: 800 });
